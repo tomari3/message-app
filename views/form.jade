@@ -1,0 +1,16 @@
+extends layout 
+
+block content 
+  header
+    h1= title
+    p Welcome to #{title}
+    a(href="/") back home
+  main
+    form(method="POST" action="/new")
+      div 
+        label(for="user") user 
+        input(type="text" name="user" placeholder="name")
+      div   
+        label(for="message") message
+        input(type="text" name="message" placeholder="message")
+      button(type="submit") Send
